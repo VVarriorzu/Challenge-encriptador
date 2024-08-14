@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Encriptador Alura</h1>
+        <textarea id="textoEntrada" placeholder="Escribe tu texto aquí..."></textarea>
+        <div class="botones">
+            <button id="botonEncriptar" class="boton">Encriptar</button>
+            <button id="botonDesencriptar" class="boton">Desencriptar</button>
+            <button id="botonCopiar" class="boton">Copiar</button>
+        </div>
+        <textarea id="textoSalida" placeholder="Resultado..." readonly></textarea>
+    </div>
+    <div id="alerta" class="alerta hidden"></div>
+    <footer class="pie-pagina">
+        &copy; 2024 Alejandro Vera San Juan
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

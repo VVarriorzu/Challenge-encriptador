@@ -1,0 +1,136 @@
+/* Estilos del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.contenedor {
+    flex: 1;
+    padding: 30px;
+    padding-bottom: 80px; /* Espacio para el pie de página */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto; /* Centrando el contenedor */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.botones .boton {
+    margin-bottom: 10px; /* Espaciado entre botones en vista móvil */
+}
+
+.boton {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+.boton:active {
+    transform: scale(0.98);
+}
+
+/* Estilos del pie de página */
+.pie-pagina {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    background-color: #007bff; /* Fondo azul */
+    position: relative; /* Se coloca al final del contenido */
+    z-index: 1000;
+}
+
+@media (min-width: 600px) {
+    .pie-pagina {
+        font-size: 16px;
+        padding: 20px 0;
+    }
+
+    .contenedor {
+        padding: 40px;
+        padding-bottom: 100px; /* Asegura espacio para el pie de página */
+    }
+}
+
+@media (min-width: 900px) {
+    .pie-pagina {
+        font-size: 18px;
+        padding: 25px 0;
+    }
+
+    .contenedor {
+        padding: 50px;
+        padding-bottom: 120px; /* Más espacio en pantallas grandes */
+    }
+}
+
+/* Estilos de la alerta */
+.alerta {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.4s ease, bottom 0.4s ease;
+    z-index: 1000;
+}
+
+.alerta.visible {
+    opacity: 1;
+    bottom: 50px;
+}
+
+.hidden {
+    display: none;
+}
